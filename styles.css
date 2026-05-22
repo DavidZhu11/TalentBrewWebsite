@@ -740,6 +740,72 @@ section {
   font-weight: 500;
 }
 
+/* Testimonial Page — Image + Text Layout (matches original Webflow) */
+.testimonial-section {
+  padding: 2rem 0;
+}
+
+.testimonial-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+}
+
+.testimonial-image-col {
+  flex-shrink: 0;
+}
+
+.testimonial-image-col img {
+  width: 280px;
+  height: 280px;
+  object-fit: contain;
+  border-radius: 1.5rem;
+}
+
+.testimonial-text-col {
+  flex: 1;
+}
+
+.testimonial-text-col .testimonial-heading {
+  font-family: Bevellier, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+}
+
+.testimonial-text-col .testimonial-quote {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--black);
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.testimonial-text-col .testimonial-attribution {
+  font-family: Bevellier, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--black);
+}
+
+@media (max-width: 768px) {
+  .testimonial-wrapper {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+  }
+
+  .testimonial-image-col img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
 /* ----------------------------------------
    FAQ
    ---------------------------------------- */
