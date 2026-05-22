@@ -51,7 +51,7 @@
   --pink: #ff96c7;
   --purple-bg: #bfc5fe;
   --white: white;
-  --blue-bg: #ddf4fd;
+  --blue-bg: #e4f7ff;
 }
 
 /* ----------------------------------------
@@ -661,6 +661,135 @@ section {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.04em;
+}
+
+/* ----------------------------------------
+   Services Page — Hero
+   ---------------------------------------- */
+.services-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2rem;
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 140px 2rem 2rem;
+}
+
+.services-hero h1 {
+  font-family: Bevellier, sans-serif;
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.services-hero .services-subtitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.services-hero img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+/* ----------------------------------------
+   Services Page — Plan Cards
+   ---------------------------------------- */
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.plan-card {
+  background: var(--white);
+  border: 3px solid var(--black);
+  box-shadow: 5px 5px 0 0 var(--black);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all .25s ease;
+}
+
+.plan-card:hover {
+  box-shadow: 0 0 0 0 var(--black);
+  transform: translate(5px, 5px);
+}
+
+.plan-card img.plan-character {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.plan-card .plan-title {
+  font-family: Bevellier, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.plan-card .plan-desc {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  text-align: left;
+}
+
+.plan-features {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.plan-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.plan-feature img.check-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.plan-card .btn {
+  margin-top: auto;
+  width: 100%;
+}
+
+/* ----------------------------------------
+   CTA with character
+   ---------------------------------------- */
+.cta-character {
+  text-align: center;
+  padding: 0 2rem 1.5rem;
+}
+
+.cta-character img {
+  width: 180px;
+  height: auto;
+  margin: 0 auto;
 }
 
 /* ----------------------------------------
@@ -1476,6 +1605,21 @@ section {
   }
 
   .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-hero {
+    grid-template-columns: 1fr;
+    padding-top: 120px;
+    text-align: center;
+  }
+
+  .services-hero img {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .plans-grid {
     grid-template-columns: 1fr;
   }
 }
