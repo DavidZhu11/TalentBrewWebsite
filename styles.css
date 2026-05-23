@@ -710,7 +710,7 @@ section {
 }
 
 .plan-card {
-  background: var(--white);
+  background: var(--purple-bg);
   border: 3px solid var(--black);
   box-shadow: 5px 5px 0 0 var(--black);
   border-radius: 1.5rem;
@@ -1150,36 +1150,49 @@ section {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 3rem;
-  max-width: 60rem;
+  max-width: 84rem;
   margin: 0 auto;
-  padding: 2rem 0 4rem;
+  padding: 2rem 2.5rem 4rem;
 }
 
 .faq-sidebar {
   position: sticky;
-  top: 120px;
+  top: 2rem;
 }
 
 .faq-badge {
   display: inline-block;
-  background: var(--pink);
+  background-color: #fdba74;
   color: var(--black);
   font-family: Bevellier, sans-serif;
   font-weight: 700;
   font-size: 0.85rem;
   text-transform: uppercase;
-  padding: 0.35rem 1rem;
-  border-radius: 99px;
+  padding: 5px 10px;
+  border-radius: 8px;
   border: 2px solid var(--black);
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
 }
 
 .faq-sidebar h2 {
   font-family: Bevellier, sans-serif;
-  font-size: 3rem;
+  font-size: 4.5rem;
   font-weight: 800;
-  line-height: 1;
+  line-height: 0.9;
   text-transform: uppercase;
+}
+
+.faq-heading-character {
+  display: inline-block;
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  border: 3px solid var(--black);
+  border-radius: 8px;
+  padding: 4px;
+  background: transparent;
 }
 
 .faq-list {
@@ -1187,57 +1200,86 @@ section {
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 0;
+  gap: 2rem;
 }
 
 .faq-item {
-  border-bottom: 2px solid var(--black);
-  padding: 1.5rem 0;
+  background: var(--blue-bg);
+  border: 3px solid var(--black);
+  box-shadow: 4px 4px 0 0 var(--black);
   cursor: pointer;
+  border-radius: 1rem;
+  width: 100%;
+  padding: 2rem;
+  position: relative;
+  transition: box-shadow .25s ease, transform .25s ease;
 }
 
-.faq-item:first-child {
-  border-top: 2px solid var(--black);
+.faq-item:hover {
+  box-shadow: 2px 2px 0 0 var(--black);
+  transform: translate(2px, 2px);
 }
 
 .faq-question {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.25rem;
   width: 100%;
   text-align: left;
-  font-family: Bevellier, sans-serif;
-  font-size: 1.15rem;
-  font-weight: 700;
   cursor: pointer;
   background: none;
   border: none;
   padding: 0;
   color: var(--black);
-  text-transform: capitalize;
 }
 
 .faq-question-text {
   flex: 1;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-transform: uppercase;
+  font-family: Bevellier, sans-serif;
 }
 
 .faq-question img {
-  width: auto;
-  height: 80px;
+  height: auto;
   object-fit: contain;
   flex-shrink: 0;
 }
 
-.faq-icon {
-  font-size: 1.4rem;
-  color: var(--pink);
-  transition: transform .25s ease;
-  flex-shrink: 0;
-  margin-left: 1rem;
+/* CSS Cross Plus Icon — black circle with white lines */
+.faq-plus-icon {
+  border: 3px solid var(--black);
+  background-color: var(--black);
+  cursor: pointer;
+  border-radius: 100px;
+  flex: none;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  transition: transform .3s ease;
 }
 
-.faq-item.open .faq-icon {
+.faq-item.open .faq-plus-icon {
   transform: rotate(45deg);
+}
+
+.plus-line {
+  z-index: 1;
+  background-color: var(--white);
+  width: 0.65rem;
+  height: 2px;
+  position: relative;
+}
+
+.plus-line.vertical {
+  position: absolute;
+  transform: rotate(90deg);
 }
 
 .faq-answer {
@@ -1248,12 +1290,12 @@ section {
 }
 
 .faq-item.open .faq-answer {
-  max-height: 300px;
-  padding-top: 1rem;
+  max-height: 400px;
+  padding-top: 1.5rem;
 }
 
 .faq-answer p {
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.7;
   color: var(--black);
 }
