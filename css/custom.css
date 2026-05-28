@@ -30,13 +30,18 @@
   align-self: center !important;
 }
 
-/* Smaller partner logos on desktop */
+/* Partner logos sizing */
 .partner-logo {
-  max-width: 6rem;
+  max-width: 10rem;
   height: auto;
 }
 
-/* Bigger "Trusted by:" text */
+/* "Trusted by:" text */
 .partner-grid-wrapper > .text-size-regular {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
+}
+
+/* Tighter spacing between logos */
+.partner-component-grid {
+  gap: 1.5rem !important;
 }
