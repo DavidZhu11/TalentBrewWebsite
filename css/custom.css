@@ -1,0 +1,12 @@
+/* Custom overrides on top of Webflow CSS */
+
+/* Fix nav grid after removing Coffee Recruiting link */
+.nav-inner-grid {
+  grid-template-columns: 1fr 1fr !important;
+  grid-auto-flow: dense !important;
+}
+
+/* Let all nav links auto-flow instead of explicit grid positions */
+.nav-inner-grid > .link-button {
+  grid-area: auto !important;
+}
