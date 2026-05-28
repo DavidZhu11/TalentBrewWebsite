@@ -1,4 +1,4 @@
-html {
+﻿html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   font-family: sans-serif;
@@ -2164,7 +2164,7 @@ textarea.w-input, textarea.w-select {
   --pink: #ff96c7;
   --purple-bg: #bfc5fe;
   --white: white;
-  --blue-bg: #d7f0fa;
+  --blue-bg: #e4f7ff;
 }
 
 .w-layout-grid {
