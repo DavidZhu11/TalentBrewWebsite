@@ -10,3 +10,8 @@
 .nav-inner-grid > .link-button {
   grid-area: auto !important;
 }
+
+/* Even spacing for 2 hero buttons */
+.button-wrapper {
+  gap: 1rem;
+}
