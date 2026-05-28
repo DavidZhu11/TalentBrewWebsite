@@ -24,3 +24,8 @@
   padding-right: 1.5rem !important;
   margin-right: 0 !important;
 }
+
+.medium-main-button .text-button {
+  margin-right: 0 !important;
+  align-self: center !important;
+}
