@@ -29,3 +29,14 @@
   margin-right: 0 !important;
   align-self: center !important;
 }
+
+/* Smaller partner logos on desktop */
+.partner-logo {
+  max-width: 6rem;
+  height: auto;
+}
+
+/* Bigger "Trusted by:" text */
+.partner-grid-wrapper > .text-size-regular {
+  font-size: 1.5rem;
+}
