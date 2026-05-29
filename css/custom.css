@@ -201,8 +201,8 @@
 .logo-decoration {
   display: block;
   margin: 0 auto;
-  opacity: 0.12;
-  max-width: 120px;
+  opacity: 1;
+  max-width: 200px;
   height: auto;
   padding: 1rem 0;
 }
