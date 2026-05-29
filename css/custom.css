@@ -7,7 +7,7 @@
 /* Make nav-wrapper a proper top bar - keep absolute since HTML is deep in page */
 .nav-wrapper {
   margin-top: 0 !important;
-  padding: 0.75rem 0 !important;
+  padding: 1rem 0 !important;
   position: absolute !important;
   inset: 0% 0% auto !important;
   z-index: 10;
@@ -36,10 +36,15 @@
 /* Force logo into col 1, navbar into col 2 (override Webflow w-node placements) */
 .navbar-component-grid > .link-block {
   grid-area: 1 / 1 / 2 / 2 !important;
+  align-self: center !important;
 }
 
 .navbar-component-grid > .navbar {
   grid-area: 1 / 2 / 2 / 3 !important;
+  align-self: center !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
 }
 
 /* Make logo bigger */
@@ -59,7 +64,9 @@
 .navbar {
   position: static !important;
   padding-bottom: 0 !important;
+  padding-top: 0 !important;
   background: transparent !important;
+  width: 100% !important;
 }
 
 /* Fix link-button for inline display */
