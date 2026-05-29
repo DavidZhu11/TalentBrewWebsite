@@ -149,6 +149,12 @@
   margin-top: 0 !important;
 }
 
+.section-home-header {
+  position: relative;
+  z-index: 1;
+  overflow: clip !important;
+}
+
 /* ============================================
    HERO BUTTONS
    ============================================ */
