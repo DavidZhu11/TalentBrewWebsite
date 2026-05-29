@@ -1,22 +1,141 @@
 /* Custom overrides on top of Webflow CSS */
 
-/* Fix nav grid after removing Coffee Recruiting link */
-.nav-inner-grid {
-  grid-template-columns: 1fr 1fr !important;
-  grid-auto-flow: dense !important;
+/* ============================================
+   INLINE NAVIGATION BAR (replaces dropdown)
+   ============================================ */
+
+/* Make nav-wrapper a proper top bar */
+.nav-wrapper {
+  margin-top: 0 !important;
+  padding: 0.75rem 0 !important;
+  position: relative !important;
+  background-color: var(--blue-bg) !important;
 }
 
-/* Let all nav links auto-flow instead of explicit grid positions */
-.nav-inner-grid > .link-button {
-  grid-area: auto !important;
+/* Expand navbar container to full width */
+.navbar-container-wrapper {
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  align-items: center;
 }
+
+/* Layout: logo left, links right */
+.navbar-component-grid {
+  grid-template: none !important;
+  grid-template-columns: auto 1fr !important;
+  align-items: center !important;
+  gap: 2rem !important;
+}
+
+/* Make logo bigger */
+.image-6 {
+  width: 180px !important;
+  margin-top: 0 !important;
+  margin-left: 0 !important;
+}
+
+/* Expand logo container */
+.link-block,
+.link-block.w--current {
+  width: auto !important;
+}
+
+/* Override Webflow navbar absolute positioning */
+.navbar {
+  position: static !important;
+  padding-bottom: 0 !important;
+  background: transparent !important;
+}
+
+/* Fix link-button for inline display */
+.nav-inner-grid .link-button,
+.nav-inner-grid .link-button.w--current {
+  height: auto !important;
+  margin-bottom: 0 !important;
+  margin-top: 0 !important;
+  overflow: visible !important;
+}
+
+/* Show the nav menu inline on desktop (override Webflow's collapse) */
+.navbar .nav-menu {
+  display: flex !important;
+  position: static !important;
+  background: transparent !important;
+  padding: 0 !important;
+  overflow: visible !important;
+  height: auto !important;
+  width: auto !important;
+}
+
+/* Override the dropdown panel styles */
+.navbar-content-wrapper {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+}
+
+/* Layout nav links in a horizontal row */
+.nav-inner-grid {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 0.25rem 1.5rem !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+}
+
+/* Clean up nav link appearance for inline style */
+.nav-inner-grid > .link-button {
+  grid-area: unset !important;
+}
+
+.nav-inner-grid .link-flex {
+  gap: 0.25rem;
+}
+
+/* Hide the arrow icons in inline nav */
+.nav-inner-grid .arrow-item {
+  display: none !important;
+}
+
+/* Style the link text for inline nav */
+.nav-inner-grid .link-text-wrapper {
+  height: auto !important;
+  overflow: visible !important;
+}
+
+.nav-inner-grid .link-text {
+  font-size: 0.95rem !important;
+  text-transform: none !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 500 !important;
+}
+
+/* Only show one link-text (hide the duplicate used for hover animation) */
+.nav-inner-grid .link-text-wrapper .link-text:nth-child(2) {
+  display: none !important;
+}
+
+/* Hide hamburger menu on desktop */
+.menu-button {
+  display: none !important;
+}
+
+/* ============================================
+   HERO BUTTONS
+   ============================================ */
 
 /* Even spacing for 2 hero buttons */
 .button-wrapper {
   gap: 1rem;
 }
 
-/* Fix Our Services button - was sized for "Coffee Recruiting" */
+/* Fix Our Services button */
 .medium-main-button {
   width: auto !important;
   justify-content: center !important;
@@ -30,18 +149,151 @@
   align-self: center !important;
 }
 
-/* Partner logos sizing */
+/* ============================================
+   PARTNER LOGOS
+   ============================================ */
+
 .partner-logo {
   max-width: 12.5rem;
   height: auto;
 }
 
-/* "Trusted by:" text */
 .partner-grid-wrapper > .text-size-regular {
   font-size: 1.1rem;
 }
 
-/* Tighter spacing between logos */
 .partner-component-grid {
   gap: 1.5rem !important;
+}
+
+/* ============================================
+   LOGO DECORATIONS (scattered throughout site)
+   ============================================ */
+
+.logo-decoration {
+  display: block;
+  margin: 0 auto;
+  opacity: 0.12;
+  max-width: 120px;
+  height: auto;
+  padding: 1rem 0;
+}
+
+.logo-decoration.left {
+  margin-left: 10%;
+  margin-right: auto;
+}
+
+.logo-decoration.right {
+  margin-right: 10%;
+  margin-left: auto;
+}
+
+/* ============================================
+   SPACING FIXES
+   ============================================ */
+
+/* Space between navbar and hero content */
+.section-home-header {
+  padding-top: 1rem !important;
+}
+
+/* Reduce oversized spacers */
+.spacer-huge {
+  height: 3rem !important;
+}
+
+/* ============================================
+   MOBILE RESPONSIVE (<= 768px)
+   ============================================ */
+
+@media screen and (max-width: 768px) {
+  /* Revert to bordered nav box on mobile */
+  .navbar-container-wrapper {
+    border: 4px solid var(--black) !important;
+    box-shadow: 3px 3px 0 0 var(--black) !important;
+    border-radius: 18px !important;
+    width: auto !important;
+    max-width: 100% !important;
+    height: 5rem !important;
+  }
+
+  /* Shrink logo on mobile */
+  .image-6 {
+    width: 80px !important;
+  }
+
+  /* Hide inline nav links on mobile */
+  .navbar .nav-menu {
+    display: none !important;
+  }
+
+  /* Show hamburger menu on mobile */
+  .menu-button {
+    display: flex !important;
+  }
+
+  /* When mobile menu is open (Webflow adds w--open) */
+  .w-nav-button.w--open ~ .nav-menu,
+  .menu-button.w--open ~ .nav-menu {
+    display: block !important;
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    background: #fff !important;
+    border: 4px solid var(--black) !important;
+    border-radius: 18px !important;
+    padding: 1rem !important;
+    box-shadow: 3px 3px 0 0 var(--black) !important;
+    z-index: 100 !important;
+  }
+
+  /* Stack nav links vertically on mobile */
+  .w--open ~ .nav-menu .nav-inner-grid {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.75rem !important;
+  }
+
+  /* Show arrows on mobile menu */
+  .w--open ~ .nav-menu .arrow-item {
+    display: block !important;
+  }
+
+  /* Show both link texts for hover effect on mobile */
+  .w--open ~ .nav-menu .link-text-wrapper .link-text:nth-child(2) {
+    display: block !important;
+  }
+
+  /* Smaller logo decorations on mobile */
+  .logo-decoration {
+    max-width: 80px;
+  }
+
+  .logo-decoration.left,
+  .logo-decoration.right {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Adjust hero spacing on mobile */
+  .section-home-header {
+    padding-top: 0.5rem !important;
+  }
+}
+
+/* Tablet breakpoint */
+@media screen and (max-width: 991px) and (min-width: 769px) {
+  .image-6 {
+    width: 140px !important;
+  }
+
+  .nav-inner-grid {
+    gap: 0.25rem 1rem !important;
+  }
+
+  .nav-inner-grid .link-text {
+    font-size: 0.85rem !important;
+  }
 }
