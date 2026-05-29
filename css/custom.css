@@ -167,6 +167,11 @@
   padding-top: 5rem !important;
 }
 
+/* Home page already has hero spacing, don't double up */
+.body .main-wrapper {
+  padding-top: 0 !important;
+}
+
 /* ============================================
    HERO BUTTONS
    ============================================ */
