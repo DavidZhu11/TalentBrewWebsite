@@ -139,6 +139,18 @@
   display: none !important;
 }
 
+/* Disable Webflow hover slide-up animation on nav links */
+.nav-inner-grid .link-text-wrapper,
+.nav-inner-grid .link-flex,
+.nav-inner-grid .link-button {
+  transform: none !important;
+  transition: none !important;
+}
+
+.nav-inner-grid .link-button:hover {
+  opacity: 0.7;
+}
+
 /* Hide hamburger menu on desktop */
 .menu-button {
   display: none !important;
