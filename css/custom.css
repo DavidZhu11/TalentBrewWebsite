@@ -28,8 +28,18 @@
 .navbar-component-grid {
   grid-template: none !important;
   grid-template-columns: auto 1fr !important;
+  grid-template-rows: auto !important;
   align-items: center !important;
   gap: 2rem !important;
+}
+
+/* Force logo into col 1, navbar into col 2 (override Webflow w-node placements) */
+.navbar-component-grid > .link-block {
+  grid-area: 1 / 1 / 2 / 2 !important;
+}
+
+.navbar-component-grid > .navbar {
+  grid-area: 1 / 2 / 2 / 3 !important;
 }
 
 /* Make logo bigger */
