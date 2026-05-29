@@ -4,176 +4,166 @@
    INLINE NAVIGATION BAR (replaces dropdown)
    ============================================ */
 
-/* Make nav-wrapper a proper top bar - keep absolute since HTML is deep in page */
+/* Nav wrapper z-index applies everywhere */
 .nav-wrapper {
-  margin-top: 0 !important;
-  padding: 0.5rem 0 !important;
-  position: absolute !important;
-  inset: 0% 0% auto !important;
   z-index: 100 !important;
 }
 
-/* Expand navbar container to full width */
-.navbar-container-wrapper {
-  border: none !important;
-  box-shadow: none !important;
-  border-radius: 0 !important;
-  width: 100% !important;
-  max-width: 100% !important;
-  height: auto !important;
-  align-items: center;
-}
+/* ============================================
+   DESKTOP-ONLY OVERRIDES (>= 769px)
+   ============================================ */
 
-/* Layout: logo left, links right */
-.navbar-component-grid {
-  grid-template: none !important;
-  grid-template-columns: auto 1fr !important;
-  grid-template-rows: auto !important;
-  align-items: center !important;
-  gap: 2rem !important;
-}
-
-/* Force logo into col 1, navbar into col 2 (override Webflow w-node placements) */
-.navbar-component-grid > .link-block {
-  grid-area: 1 / 1 / 2 / 2 !important;
-  align-self: center !important;
-}
-
-.navbar-component-grid > .navbar {
-  grid-area: 1 / 2 / 2 / 3 !important;
-  align-self: center !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: flex-end !important;
-}
-
-/* Make logo bigger */
-.image-6 {
-  width: 220px !important;
-  margin-top: 0 !important;
-  margin-left: 0 !important;
-}
-
-/* Expand logo container */
-.link-block,
-.link-block.w--current {
-  width: auto !important;
-}
-
-/* Override Webflow navbar absolute positioning */
-.navbar {
-  position: static !important;
-  padding-bottom: 0 !important;
-  padding-top: 0 !important;
-  background: transparent !important;
-  width: 100% !important;
-}
-
-/* Fix link-button for inline display */
-.nav-inner-grid .link-button,
-.nav-inner-grid .link-button.w--current {
-  height: auto !important;
-  margin-bottom: 0 !important;
-  margin-top: 0 !important;
-  overflow: visible !important;
-}
-
-/* Show the nav menu inline on desktop (override Webflow's collapse) */
-.navbar .nav-menu {
-  display: flex !important;
-  position: static !important;
-  background: transparent !important;
-  padding: 0 !important;
-  overflow: visible !important;
-  height: auto !important;
-  width: auto !important;
-}
-
-/* Override the dropdown panel styles */
-.navbar-content-wrapper {
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  border-radius: 0 !important;
-  padding: 0 !important;
-}
-
-/* Layout nav links in a horizontal row */
-.nav-inner-grid {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  gap: 0.25rem 1.5rem !important;
-  align-items: center !important;
-  justify-content: flex-end !important;
-}
-
-/* Clean up nav link appearance for inline style */
-.nav-inner-grid > .link-button {
-  grid-area: unset !important;
-}
-
-.nav-inner-grid .link-flex {
-  gap: 0.25rem;
-}
-
-/* Hide the arrow icons in inline nav */
-.nav-inner-grid .arrow-item {
-  display: none !important;
-}
-
-/* Style the link text for inline nav */
-.nav-inner-grid .link-text-wrapper {
-  height: auto !important;
-  overflow: visible !important;
-}
-
-.nav-inner-grid .link-text {
-  font-size: 1.15rem !important;
-  text-transform: none !important;
-  font-family: 'Poppins', sans-serif !important;
-  font-weight: 500 !important;
-}
-
-/* Only show one link-text (hide the duplicate used for hover animation) */
-.nav-inner-grid .link-text-wrapper .link-text:nth-child(2) {
-  display: none !important;
-}
-
-/* Disable Webflow hover slide-up animation on nav links */
-.nav-inner-grid .link-text-wrapper,
-.nav-inner-grid .link-flex,
-.nav-inner-grid .link-button {
-  transform: none !important;
-  transition: none !important;
-}
-
-.nav-inner-grid .link-button:hover {
-  opacity: 0.7;
-}
-
-/* Hide hamburger menu on desktop */
-.menu-button {
-  display: none !important;
-}
-
-/* Desktop-only overrides (min-width so they don't fight Webflow mobile) */
 @media screen and (min-width: 769px) {
-  /* Prevent 3D cube from overlapping the nav bar */
+  .nav-wrapper {
+    margin-top: 0 !important;
+    padding: 0.5rem 0 !important;
+    position: absolute !important;
+    inset: 0% 0% auto !important;
+  }
+
+  .navbar-container-wrapper {
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    align-items: center;
+  }
+
+  .navbar-component-grid {
+    grid-template: none !important;
+    grid-template-columns: auto 1fr !important;
+    grid-template-rows: auto !important;
+    align-items: center !important;
+    gap: 2rem !important;
+  }
+
+  .navbar-component-grid > .link-block {
+    grid-area: 1 / 1 / 2 / 2 !important;
+    align-self: center !important;
+  }
+
+  .navbar-component-grid > .navbar {
+    grid-area: 1 / 2 / 2 / 3 !important;
+    align-self: center !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+  }
+
+  .image-6 {
+    width: 220px !important;
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  .link-block,
+  .link-block.w--current {
+    width: auto !important;
+  }
+
+  .navbar {
+    position: static !important;
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+    background: transparent !important;
+    width: 100% !important;
+  }
+
+  .nav-inner-grid .link-button,
+  .nav-inner-grid .link-button.w--current {
+    height: auto !important;
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+    overflow: visible !important;
+  }
+
+  .navbar .nav-menu {
+    display: flex !important;
+    position: static !important;
+    background: transparent !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    height: auto !important;
+    width: auto !important;
+  }
+
+  .navbar-content-wrapper {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+  }
+
+  .nav-inner-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.25rem 1.5rem !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+  }
+
+  .nav-inner-grid > .link-button {
+    grid-area: unset !important;
+  }
+
+  .nav-inner-grid .link-flex {
+    gap: 0.25rem;
+  }
+
+  .nav-inner-grid .arrow-item {
+    display: none !important;
+  }
+
+  .nav-inner-grid .link-text-wrapper {
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  .nav-inner-grid .link-text {
+    font-size: 1.15rem !important;
+    text-transform: none !important;
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 500 !important;
+  }
+
+  .nav-inner-grid .link-text-wrapper .link-text:nth-child(2) {
+    display: none !important;
+  }
+
+  .nav-inner-grid .link-text-wrapper,
+  .nav-inner-grid .link-flex,
+  .nav-inner-grid .link-button {
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .nav-inner-grid .link-button:hover {
+    opacity: 0.7;
+  }
+
+  .menu-button {
+    display: none !important;
+  }
+
   ._3d-container {
     margin-top: 0 !important;
     transform: scale(0.85) !important;
   }
 
-  /* Push all page content below the absolutely-positioned nav */
   .main-wrapper {
     padding-top: 5rem !important;
   }
 
-  /* Home page already has hero spacing, don't double up */
   .body .main-wrapper {
     padding-top: 0 !important;
   }
 }
+
+
+
 
 /* ============================================
    HERO BUTTONS
@@ -252,23 +242,8 @@
   height: 3rem !important;
 }
 
-/* ============================================
-   TABLET RESPONSIVE (769px - 991px)
-   ============================================ */
 
-@media screen and (max-width: 991px) {
-  .image-6 {
-    width: 160px !important;
-  }
 
-  .nav-inner-grid {
-    gap: 0.25rem 1rem !important;
-  }
-
-  .nav-inner-grid .link-text {
-    font-size: 0.95rem !important;
-  }
-}
 
 /* ============================================
    MOBILE RESPONSIVE (<= 768px)
@@ -277,54 +252,6 @@
    ============================================ */
 
 @media screen and (max-width: 768px) {
-  /* Revert navbar to original Webflow pill style */
-  .navbar-container-wrapper {
-    border: 4px solid var(--black) !important;
-    box-shadow: 3px 3px 0 0 var(--black) !important;
-    border-radius: 18px !important;
-    width: auto !important;
-    max-width: 100% !important;
-  }
-
-  /* Revert grid to original Webflow layout */
-  .navbar-component-grid {
-    grid-template: unset !important;
-    gap: unset !important;
-  }
-
-  .navbar-component-grid > .link-block,
-  .navbar-component-grid > .navbar {
-    grid-area: unset !important;
-  }
-
-  /* Revert logo to Webflow's mobile size */
-  .image-6 {
-    width: unset !important;
-  }
-
-  .link-block,
-  .link-block.w--current {
-    width: unset !important;
-  }
-
-  /* Let Webflow position the navbar */
-  .navbar {
-    position: unset !important;
-    bottom: unset !important;
-    left: unset !important;
-    right: unset !important;
-    padding-bottom: unset !important;
-  }
-
-  /* Hide inline nav, show hamburger */
-  .navbar .nav-menu {
-    display: none !important;
-  }
-
-  .menu-button {
-    display: flex !important;
-  }
-
   /* Mobile menu open state */
   .w-nav-button.w--open ~ .nav-menu,
   .menu-button.w--open ~ .nav-menu {
