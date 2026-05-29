@@ -380,7 +380,29 @@
 
   /* Scale cube smaller on mobile */
   ._3d-container {
-    transform: scale(0.6) !important;
+    transform: scale(0.45) !important;
+    max-height: 250px !important;
+    margin-top: -50px !important;
+  }
+
+  /* Reduce excessive Webflow hero padding on mobile */
+  .home-grid-01 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+    height: auto !important;
+  }
+
+  /* Fix buttons stretching full width */
+  .medium-main-button,
+  .smaller-main-button {
+    width: auto !important;
+    max-width: 200px !important;
+  }
+
+  .button-wrapper {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.75rem !important;
   }
 
   /* Adjust top padding for all pages on mobile */
@@ -441,16 +463,28 @@
   }
 
   ._3d-container {
-    transform: scale(0.5) !important;
+    transform: scale(0.35) !important;
+    max-height: 180px !important;
+    margin-top: -80px !important;
+  }
+
+  .home-grid-01 {
+    padding-top: 1rem !important;
   }
 
   .logo-decoration {
     max-width: 70px;
   }
 
-  /* Stack hero buttons */
-  .button-wrapper {
-    flex-direction: column !important;
-    align-items: flex-start !important;
+  /* Footer: stack everything */
+  .footer-top-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .footer-logo-decoration {
+    position: static !important;
+    transform: none !important;
+    text-align: center;
+    padding: 1rem 0;
   }
 }
