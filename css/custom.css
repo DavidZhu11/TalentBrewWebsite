@@ -162,7 +162,8 @@
   transform: scale(0.85) !important;
 }
 
-.section-home-header {
+/* Push all page content below the absolutely-positioned nav */
+.main-wrapper {
   padding-top: 5rem !important;
 }
 
