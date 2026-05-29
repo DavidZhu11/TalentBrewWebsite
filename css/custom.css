@@ -147,12 +147,11 @@
 /* Prevent 3D cube from overlapping the nav bar */
 ._3d-container {
   margin-top: 0 !important;
+  transform: scale(0.85) !important;
 }
 
 .section-home-header {
-  position: relative;
-  z-index: 1;
-  overflow: clip !important;
+  padding-top: 5rem !important;
 }
 
 /* ============================================
