@@ -144,6 +144,11 @@
   display: none !important;
 }
 
+/* Prevent 3D cube from overlapping the nav bar */
+._3d-container {
+  margin-top: 0 !important;
+}
+
 /* ============================================
    HERO BUTTONS
    ============================================ */
