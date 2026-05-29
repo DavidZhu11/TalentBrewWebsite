@@ -4,12 +4,13 @@
    INLINE NAVIGATION BAR (replaces dropdown)
    ============================================ */
 
-/* Make nav-wrapper a proper top bar */
+/* Make nav-wrapper a proper top bar - keep absolute since HTML is deep in page */
 .nav-wrapper {
   margin-top: 0 !important;
   padding: 0.75rem 0 !important;
-  position: relative !important;
-  background-color: var(--blue-bg) !important;
+  position: absolute !important;
+  inset: 0% 0% auto !important;
+  z-index: 10;
 }
 
 /* Expand navbar container to full width */
