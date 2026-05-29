@@ -254,12 +254,10 @@
    ============================================ */
 
 @media screen and (max-width: 991px) {
-  /* Slightly smaller logo on tablet */
   .image-6 {
     width: 160px !important;
   }
 
-  /* Tighter link spacing */
   .nav-inner-grid {
     gap: 0.25rem 1rem !important;
   }
@@ -267,77 +265,64 @@
   .nav-inner-grid .link-text {
     font-size: 0.95rem !important;
   }
-
-  /* Scale cube for tablet */
-  ._3d-container {
-    transform: scale(0.75) !important;
-  }
 }
 
 /* ============================================
    MOBILE RESPONSIVE (<= 768px)
+   Only undo desktop nav customizations.
+   Let Webflow handle everything else.
    ============================================ */
 
 @media screen and (max-width: 768px) {
-  /* Revert navbar to pill box with hamburger */
-  .nav-wrapper {
-    padding: 0.5rem 0 !important;
-  }
-
+  /* Revert navbar to original Webflow pill style */
   .navbar-container-wrapper {
     border: 4px solid var(--black) !important;
     box-shadow: 3px 3px 0 0 var(--black) !important;
     border-radius: 18px !important;
     width: auto !important;
     max-width: 100% !important;
-    height: 5rem !important;
   }
 
-  /* Revert grid to original layout for hamburger */
+  /* Revert grid to original Webflow layout */
   .navbar-component-grid {
-    grid-template: ". Area Area" / 1fr 1.5fr 1fr !important;
-    gap: 1rem !important;
+    grid-template: unset !important;
+    gap: unset !important;
   }
 
-  .navbar-component-grid > .link-block {
-    grid-area: span 1 / span 1 / span 1 / span 1 !important;
-  }
-
+  .navbar-component-grid > .link-block,
   .navbar-component-grid > .navbar {
-    grid-area: 1 / 1 / 2 / 4 !important;
+    grid-area: unset !important;
   }
 
-  /* Shrink logo on mobile */
+  /* Revert logo to Webflow's mobile size */
   .image-6 {
-    width: 80px !important;
-    margin-top: -10px !important;
+    width: unset !important;
   }
 
   .link-block,
   .link-block.w--current {
-    width: 100px !important;
+    width: unset !important;
   }
 
-  /* Revert navbar to absolute bottom positioning for hamburger */
+  /* Let Webflow position the navbar */
   .navbar {
-    position: absolute !important;
-    bottom: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    padding-bottom: 14px !important;
+    position: unset !important;
+    bottom: unset !important;
+    left: unset !important;
+    right: unset !important;
+    padding-bottom: unset !important;
   }
 
-  /* Hide inline nav links on mobile */
+  /* Hide inline nav, show hamburger */
   .navbar .nav-menu {
     display: none !important;
   }
 
-  /* Show hamburger menu on mobile */
   .menu-button {
     display: flex !important;
   }
 
-  /* When mobile menu is open (Webflow adds w--open) */
+  /* Mobile menu open state */
   .w-nav-button.w--open ~ .nav-menu,
   .menu-button.w--open ~ .nav-menu {
     display: block !important;
@@ -353,24 +338,20 @@
     z-index: 100 !important;
   }
 
-  /* Stack nav links vertically on mobile menu */
   .w--open ~ .nav-menu .nav-inner-grid {
     display: grid !important;
     grid-template-columns: 1fr !important;
     gap: 0.75rem !important;
   }
 
-  /* Show arrows on mobile menu */
   .w--open ~ .nav-menu .arrow-item {
     display: block !important;
   }
 
-  /* Show both link texts for hover effect on mobile */
   .w--open ~ .nav-menu .link-text-wrapper .link-text:nth-child(2) {
     display: block !important;
   }
 
-  /* Re-enable transforms for mobile menu animations */
   .w--open ~ .nav-menu .link-text-wrapper,
   .w--open ~ .nav-menu .link-flex,
   .w--open ~ .nav-menu .link-button {
@@ -378,59 +359,21 @@
     transition: unset !important;
   }
 
-  /* Scale cube smaller on mobile */
+  /* Undo desktop overrides - let Webflow handle */
   ._3d-container {
-    transform: scale(0.45) !important;
-    max-height: 250px !important;
-    margin-top: -50px !important;
+    transform: unset !important;
+    margin-top: unset !important;
   }
 
-  /* Reduce excessive Webflow hero padding on mobile */
-  .home-grid-01 {
-    padding-top: 2rem !important;
-    padding-bottom: 2rem !important;
-    height: auto !important;
-  }
-
-  /* Fix buttons stretching full width */
-  .medium-main-button,
-  .smaller-main-button {
-    width: auto !important;
-    max-width: 200px !important;
-  }
-
-  .button-wrapper {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    gap: 0.75rem !important;
-  }
-
-  /* Adjust top padding for all pages on mobile */
   .main-wrapper {
-    padding-top: 4rem !important;
-  }
-
-  .body .main-wrapper {
     padding-top: 0 !important;
   }
 
-  /* Smaller logo decorations on mobile */
-  .logo-decoration {
-    max-width: 100px;
-  }
-
-  .logo-decoration.left,
-  .logo-decoration.right {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  /* Adjust hero spacing on mobile */
   .section-home-header {
-    padding-top: 0.5rem !important;
+    padding-top: unset !important;
   }
 
-  /* Footer logo - hide or reposition on mobile */
+  /* Footer logo for mobile */
   .footer-logo-decoration {
     position: static !important;
     transform: none !important;
@@ -438,53 +381,10 @@
     padding: 1.5rem 0;
   }
 
-  /* Partner logos smaller on mobile */
-  .partner-logo {
-    max-width: 8rem;
-  }
-}
-
-/* ============================================
-   SMALL MOBILE (<= 479px)
-   ============================================ */
-
-@media screen and (max-width: 479px) {
-  .image-6 {
-    width: 60px !important;
-  }
-
-  .navbar-container-wrapper {
-    height: 4rem !important;
-  }
-
-  .menu-button {
-    margin-right: 0.5rem !important;
-    padding: 18px !important;
-  }
-
-  ._3d-container {
-    transform: scale(0.35) !important;
-    max-height: 180px !important;
-    margin-top: -80px !important;
-  }
-
-  .home-grid-01 {
-    padding-top: 1rem !important;
-  }
-
+  /* Hide decorative logo on mobile */
   .logo-decoration {
-    max-width: 70px;
-  }
-
-  /* Footer: stack everything */
-  .footer-top-grid {
-    grid-template-columns: 1fr !important;
-  }
-
-  .footer-logo-decoration {
-    position: static !important;
-    transform: none !important;
-    text-align: center;
-    padding: 1rem 0;
+    display: none !important;
   }
 }
+
+
