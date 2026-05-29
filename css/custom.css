@@ -156,20 +156,23 @@
   display: none !important;
 }
 
-/* Prevent 3D cube from overlapping the nav bar */
-._3d-container {
-  margin-top: 0 !important;
-  transform: scale(0.85) !important;
-}
+/* Desktop-only overrides (min-width so they don't fight Webflow mobile) */
+@media screen and (min-width: 769px) {
+  /* Prevent 3D cube from overlapping the nav bar */
+  ._3d-container {
+    margin-top: 0 !important;
+    transform: scale(0.85) !important;
+  }
 
-/* Push all page content below the absolutely-positioned nav */
-.main-wrapper {
-  padding-top: 5rem !important;
-}
+  /* Push all page content below the absolutely-positioned nav */
+  .main-wrapper {
+    padding-top: 5rem !important;
+  }
 
-/* Home page already has hero spacing, don't double up */
-.body .main-wrapper {
-  padding-top: 0 !important;
+  /* Home page already has hero spacing, don't double up */
+  .body .main-wrapper {
+    padding-top: 0 !important;
+  }
 }
 
 /* ============================================
@@ -359,26 +362,9 @@
     transition: unset !important;
   }
 
-  /* Undo desktop overrides - let Webflow handle */
-  ._3d-container {
-    transform: unset !important;
-    margin-top: unset !important;
-  }
-
-  .main-wrapper {
-    padding-top: 0 !important;
-  }
-
-  .section-home-header {
-    padding-top: unset !important;
-  }
-
-  /* Footer logo for mobile */
+  /* Hide footer logo on mobile */
   .footer-logo-decoration {
-    position: static !important;
-    transform: none !important;
-    text-align: center;
-    padding: 1.5rem 0;
+    display: none !important;
   }
 
   /* Hide decorative logo on mobile */
