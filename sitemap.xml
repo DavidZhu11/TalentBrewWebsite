@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.mytalentbrew.com/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.mytalentbrew.com/beverage-recruiting.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mytalentbrew.com/coffee-recruiting.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mytalentbrew.com/contact.html</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.mytalentbrew.com/faqs.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mytalentbrew.com/meet-the-team.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.mytalentbrew.com/testimonials.html</loc>
+    <priority>0.7</priority>
+  </url>
+</urlset>

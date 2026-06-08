@@ -1,4 +1,4 @@
-﻿html {
+html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   font-family: sans-serif;
@@ -188,27 +188,27 @@ td, th {
 }
 
 .w-icon-slider-right:before {
-  content: "";
+  content: "?";
 }
 
 .w-icon-slider-left:before {
-  content: "";
+  content: "?";
 }
 
 .w-icon-nav-menu:before {
-  content: "";
+  content: "?";
 }
 
 .w-icon-arrow-down:before, .w-icon-dropdown-toggle:before {
-  content: "";
+  content: "?";
 }
 
 .w-icon-file-upload-remove:before {
-  content: "";
+  content: "?";
 }
 
 .w-icon-file-upload-icon:before {
-  content: "";
+  content: "?";
 }
 
 * {
@@ -2048,7 +2048,7 @@ textarea.w-input, textarea.w-select {
 
 @font-face {
   font-family: Bevellier;
-  src: url("https://cdn.prod.website-files.com/682b3c847ca8b75cf04ae23b/682b3c847ca8b75cf04ae297_Bevellier-Light.woff2") format("woff2");
+  src: url("../fonts/Bevellier-Light.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -2056,7 +2056,7 @@ textarea.w-input, textarea.w-select {
 
 @font-face {
   font-family: Bevellier;
-  src: url("https://cdn.prod.website-files.com/682b3c847ca8b75cf04ae23b/682b3c847ca8b75cf04ae298_Bevellier-Regular.woff2") format("woff2");
+  src: url("../fonts/Bevellier-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -2064,7 +2064,7 @@ textarea.w-input, textarea.w-select {
 
 @font-face {
   font-family: Bevellier;
-  src: url("https://cdn.prod.website-files.com/682b3c847ca8b75cf04ae23b/682b3c847ca8b75cf04ae29a_Bevellier-Medium.woff2") format("woff2");
+  src: url("../fonts/Bevellier-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -2072,7 +2072,7 @@ textarea.w-input, textarea.w-select {
 
 @font-face {
   font-family: Bevellier;
-  src: url("https://cdn.prod.website-files.com/682b3c847ca8b75cf04ae23b/682b3c847ca8b75cf04ae299_Bevellier-Semibold.woff2") format("woff2");
+  src: url("../fonts/Bevellier-Semibold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -2080,7 +2080,7 @@ textarea.w-input, textarea.w-select {
 
 @font-face {
   font-family: Bevellier;
-  src: url("https://cdn.prod.website-files.com/682b3c847ca8b75cf04ae23b/682b3c847ca8b75cf04ae29b_Bevellier-Bold.woff2") format("woff2");
+  src: url("../fonts/Bevellier-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -2088,7 +2088,7 @@ textarea.w-input, textarea.w-select {
 
 @font-face {
   font-family: Bevellier;
-  src: url("https://cdn.prod.website-files.com/682b3c847ca8b75cf04ae23b/682b3c847ca8b75cf04ae29e_Bevellier-Black.woff2") format("woff2");
+  src: url("../fonts/Bevellier-Black.woff2") format("woff2");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -2096,7 +2096,7 @@ textarea.w-input, textarea.w-select {
 
 @font-face {
   font-family: Poppins;
-  src: url("https://cdn.prod.website-files.com/682b3c847ca8b75cf04ae23b/682b3c847ca8b75cf04ae29c_Poppins-Thin.woff2") format("woff2");
+  src: url("../fonts/Poppins-Thin.woff2") format("woff2");
   font-weight: 100;
   font-style: normal;
   font-display: swap;
@@ -2104,7 +2104,7 @@ textarea.w-input, textarea.w-select {
 
 @font-face {
   font-family: Poppins;
-  src: url("https://cdn.prod.website-files.com/682b3c847ca8b75cf04ae23b/682b3c847ca8b75cf04ae29d_Poppins-Medium.woff2") format("woff2");
+  src: url("../fonts/Poppins-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -2112,7 +2112,7 @@ textarea.w-input, textarea.w-select {
 
 @font-face {
   font-family: Poppins;
-  src: url("https://cdn.prod.website-files.com/682b3c847ca8b75cf04ae23b/682b3c847ca8b75cf04ae29f_Poppins-Bold.woff2") format("woff2"), url("https://cdn.prod.website-files.com/682b3c847ca8b75cf04ae23b/682b3c847ca8b75cf04ae2a5_Poppins-ExtraBold.woff2") format("woff2");
+  src: url("../fonts/Poppins-Bold.woff2") format("woff2"), url("../fonts/Poppins-ExtraBold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -2120,7 +2120,7 @@ textarea.w-input, textarea.w-select {
 
 @font-face {
   font-family: Poppins;
-  src: url("https://cdn.prod.website-files.com/682b3c847ca8b75cf04ae23b/682b3c847ca8b75cf04ae2a1_Poppins-ExtraLight.woff2") format("woff2");
+  src: url("../fonts/Poppins-ExtraLight.woff2") format("woff2");
   font-weight: 200;
   font-style: normal;
   font-display: swap;
@@ -2128,7 +2128,7 @@ textarea.w-input, textarea.w-select {
 
 @font-face {
   font-family: Poppins;
-  src: url("https://cdn.prod.website-files.com/682b3c847ca8b75cf04ae23b/682b3c847ca8b75cf04ae2a0_Poppins-SemiBold.woff2") format("woff2");
+  src: url("../fonts/Poppins-SemiBold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -2136,7 +2136,7 @@ textarea.w-input, textarea.w-select {
 
 @font-face {
   font-family: Poppins;
-  src: url("https://cdn.prod.website-files.com/682b3c847ca8b75cf04ae23b/682b3c847ca8b75cf04ae2a2_Poppins-Black.woff2") format("woff2");
+  src: url("../fonts/Poppins-Black.woff2") format("woff2");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -2144,7 +2144,7 @@ textarea.w-input, textarea.w-select {
 
 @font-face {
   font-family: Poppins;
-  src: url("https://cdn.prod.website-files.com/682b3c847ca8b75cf04ae23b/682b3c847ca8b75cf04ae2a3_Poppins-Light.woff2") format("woff2");
+  src: url("../fonts/Poppins-Light.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -2152,7 +2152,7 @@ textarea.w-input, textarea.w-select {
 
 @font-face {
   font-family: Poppins;
-  src: url("https://cdn.prod.website-files.com/682b3c847ca8b75cf04ae23b/682b3c847ca8b75cf04ae2a4_Poppins-Regular.woff2") format("woff2");
+  src: url("../fonts/Poppins-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -4810,7 +4810,7 @@ blockquote {
   border: 4px solid var(--black);
   box-shadow: 5px 5px 0 0 var(--black);
   transform-style: preserve-3d;
-  background-image: url("https://cdn.prod.website-files.com/682b3c847ca8b75cf04ae23b/682b54d324de1a75d52811b4_Untitled%20design%20(15).png");
+  background-image: url("../images/cdn/Untitled-design-15.png");
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -4847,7 +4847,7 @@ blockquote {
   border: 4px solid var(--black);
   box-shadow: 5px 5px 0 0 var(--black);
   transform-style: preserve-3d;
-  background-image: url("https://cdn.prod.website-files.com/682b3c847ca8b75cf04ae23b/68c8ae1e5e6614fb046aa4d0_Can%20(6).png");
+  background-image: url("../images/cdn/Can-6.png");
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 2rem;
@@ -4864,7 +4864,7 @@ blockquote {
   border: 4px solid var(--black);
   box-shadow: 5px 5px 0 0 var(--black);
   transform-style: preserve-3d;
-  background-image: url("https://cdn.prod.website-files.com/682b3c847ca8b75cf04ae23b/682b5b2e14c82b5e49a56487_Untitled%20design%20(17).png");
+  background-image: url("../images/cdn/Untitled-design-17.png");
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -4904,7 +4904,7 @@ blockquote {
   border: 4px solid var(--black);
   box-shadow: 5px 5px 0 0 var(--black);
   transform-style: preserve-3d;
-  background-image: url("https://cdn.prod.website-files.com/682b3c847ca8b75cf04ae23b/68c8a8a16a76eafd63c0d25f_ChatGPT%20Image%20Sep%2015%2C%202025%2C%2008_00_25%20PM.png");
+  background-image: url("../images/cdn/ChatGPT-Image-Sep-15-2025-08_00_25-PM.png");
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -4978,7 +4978,7 @@ blockquote {
   border: 4px solid var(--black);
   box-shadow: 5px 5px 0 0 var(--black);
   transform-style: preserve-3d;
-  background-image: url("https://cdn.prod.website-files.com/682b3c847ca8b75cf04ae23b/68c0cf1952c39a3590c4e9da_ChatGPT%20Image%20Sep%209%2C%202025%2C%2009_06_15%20PM.png");
+  background-image: url("../images/cdn/ChatGPT-Image-Sep-9-2025-09_06_15-PM.png");
   background-position: 100% 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -5023,7 +5023,7 @@ blockquote {
   border: 4px solid var(--black);
   box-shadow: 5px 5px 0 0 var(--black);
   transform-style: preserve-3d;
-  background-image: url("https://cdn.prod.website-files.com/682b3c847ca8b75cf04ae23b/68c890bd36004d060b277fcf_Can%20(4).png");
+  background-image: url("../images/cdn/Can-4.png");
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -5402,59 +5402,59 @@ blockquote {
 }
 
 .text-shape.image-01-h3 {
-  background-image: url("https://cdn.prod.website-files.com/682b3c847ca8b75cf04ae23b/682b3c847ca8b75cf04ae2d4_template-img-04.avif");
+  background-image: url("../images/cdn/template-img-04.avif");
 }
 
 .text-shape.image-02-h3 {
-  background-image: url("https://cdn.prod.website-files.com/682b3c847ca8b75cf04ae23b/682c8dd0f573b66cc1bdc16a_walkingbev%20(500%20x%20500%20px)%20(1).png");
+  background-image: url("../images/cdn/walkingbev-500x500-1.png");
 }
 
 .text-shape.image-03-h3 {
-  background-image: url("https://cdn.prod.website-files.com/682b3c847ca8b75cf04ae23b/682b3c847ca8b75cf04ae2d8_template-img-02.avif");
+  background-image: url("../images/cdn/template-img-02.avif");
 }
 
 .text-shape.image-01-h2 {
-  background-image: url("https://cdn.prod.website-files.com/682b3c847ca8b75cf04ae23b/682b3c847ca8b75cf04ae2d8_template-img-02.avif");
+  background-image: url("../images/cdn/template-img-02.avif");
   width: 5.5rem;
   height: 5.5rem;
 }
 
 .text-shape.image-02-h2 {
-  background-image: url("https://cdn.prod.website-files.com/682b3c847ca8b75cf04ae23b/68c22625b68098638150f173_Untitled%20design%20(47).png");
+  background-image: url("../images/cdn/Untitled-design-47.png");
   width: 5.25rem;
   height: 5.25rem;
 }
 
 .text-shape.image-03-h2 {
-  background-image: url("https://cdn.prod.website-files.com/682b3c847ca8b75cf04ae23b/682b3c847ca8b75cf04ae2db_template-img-01.avif");
+  background-image: url("../images/cdn/template-img-01.avif");
   width: 5.5rem;
   height: 5.5rem;
 }
 
 .text-shape.image-04-h3 {
-  background-image: url("https://cdn.prod.website-files.com/682b3c847ca8b75cf04ae23b/682b3c847ca8b75cf04ae2db_template-img-01.avif");
+  background-image: url("../images/cdn/template-img-01.avif");
 }
 
 .text-shape.image-02-h1 {
-  background-image: url("https://cdn.prod.website-files.com/682b3c847ca8b75cf04ae23b/682c8f9cf378e86cf7540798_walkingbev%20(500%20x%20500%20px)%20(2).png");
+  background-image: url("../images/cdn/walkingbev-500x500-2.png");
   width: 5.5rem;
   height: 5.5rem;
 }
 
 .text-shape.image-01-h1 {
-  background-image: url("https://cdn.prod.website-files.com/682b3c847ca8b75cf04ae23b/682b3c847ca8b75cf04ae2d5_template-img-03.png");
+  background-image: url("../images/cdn/template-img-03.png");
   width: 5.5rem;
   height: 5.5rem;
 }
 
 .text-shape.image-03-h1 {
-  background-image: url("https://cdn.prod.website-files.com/682b3c847ca8b75cf04ae23b/682b3c847ca8b75cf04ae2dd_template-img-05.avif");
+  background-image: url("../images/cdn/template-img-05.avif");
   width: 5.5rem;
   height: 5.5rem;
 }
 
 .text-shape.image-04-h1 {
-  background-image: url("https://cdn.prod.website-files.com/682b3c847ca8b75cf04ae23b/682b3c847ca8b75cf04ae335_template-img-10.webp");
+  background-image: url("../images/cdn/template-img-10.webp");
   width: 5.5rem;
   height: 5.5rem;
 }
@@ -6132,19 +6132,19 @@ blockquote {
 }
 
 .testimonial-picture._03 {
-  background-image: url("https://cdn.prod.website-files.com/682b3c847ca8b75cf04ae23b/682b3c847ca8b75cf04ae321_client-03.webp");
+  background-image: url("../images/cdn/client-03.webp");
 }
 
 .testimonial-picture._02 {
-  background-image: url("https://cdn.prod.website-files.com/682b3c847ca8b75cf04ae23b/682b3c847ca8b75cf04ae322_client-04.webp");
+  background-image: url("../images/cdn/client-04.webp");
 }
 
 .testimonial-picture._04 {
-  background-image: url("https://cdn.prod.website-files.com/682b3c847ca8b75cf04ae23b/682b3c847ca8b75cf04ae331_client-02.webp");
+  background-image: url("../images/cdn/client-02.webp");
 }
 
 .testimonial-picture._01 {
-  background-image: url("https://cdn.prod.website-files.com/682b3c847ca8b75cf04ae23b/682b3c847ca8b75cf04ae32e_client-01.webp");
+  background-image: url("../images/cdn/client-01.webp");
 }
 
 .depoiments-component-grid {
@@ -6205,23 +6205,23 @@ blockquote {
 }
 
 .cta-image._01 {
-  background-image: url("https://cdn.prod.website-files.com/682b3c847ca8b75cf04ae23b/68b1c2addf7e33af4697dad5_ChatGPT%20Image%20Aug%2028%2C%202025%2C%2004_59_56%20PM.png");
+  background-image: url("../images/cdn/ChatGPT-Image-Aug-28-2025-04_59_56-PM.png");
 }
 
 .cta-image._02 {
-  background-image: url("https://cdn.prod.website-files.com/682b3c847ca8b75cf04ae23b/68b1c2ada4f10cdb0950b877_ChatGPT%20Image%20Aug%2028%2C%202025%2C%2005_08_08%20PM.png");
+  background-image: url("../images/cdn/ChatGPT-Image-Aug-28-2025-05_08_08-PM.png");
 }
 
 .cta-image._03 {
-  background-image: url("https://cdn.prod.website-files.com/682b3c847ca8b75cf04ae23b/68b1c2ad5a00d8c67b1fcdd8_ChatGPT%20Image%20Aug%2028%2C%202025%2C%2005_16_57%20PM.png");
+  background-image: url("../images/cdn/ChatGPT-Image-Aug-28-2025-05_16_57-PM.png");
 }
 
 .cta-image._04 {
-  background-image: url("https://cdn.prod.website-files.com/682b3c847ca8b75cf04ae23b/68766cc55ed95a1861a7deb9_68765e79fbc36ba37ff5fe94_ca0afa2a-3668-48c8-b943-9ce4f66e82a0.png");
+  background-image: url("../images/cdn/ca0afa2a-3668-48c8-b943-9ce4f66e82a0.png");
 }
 
 .cta-image._05 {
-  background-image: url("https://cdn.prod.website-files.com/682b3c847ca8b75cf04ae23b/68b1c0ea901e026258586d59_ChatGPT%20Image%20Aug%2029%2C%202025%2C%2011_01_57%20AM.png");
+  background-image: url("../images/cdn/ChatGPT-Image-Aug-29-2025-11_01_57-AM.png");
 }
 
 .call-to-action-wrapper {
@@ -6261,14 +6261,14 @@ blockquote {
 }
 
 .call-to-action-image._03 {
-  background-image: url("https://cdn.prod.website-files.com/682b3c847ca8b75cf04ae23b/682b3c847ca8b75cf04ae2d8_template-img-02.avif");
+  background-image: url("../images/cdn/template-img-02.avif");
   width: 14rem;
   height: 14rem;
   left: 15%;
 }
 
 .call-to-action-image._04 {
-  background-image: url("https://cdn.prod.website-files.com/682b3c847ca8b75cf04ae23b/682b3c847ca8b75cf04ae335_template-img-10.webp");
+  background-image: url("../images/cdn/template-img-10.webp");
   width: 12rem;
   height: 12rem;
   bottom: 10%;
@@ -6276,7 +6276,7 @@ blockquote {
 }
 
 .call-to-action-image._02 {
-  background-image: url("https://cdn.prod.website-files.com/682b3c847ca8b75cf04ae23b/682b3c847ca8b75cf04ae2db_template-img-01.avif");
+  background-image: url("../images/cdn/template-img-01.avif");
   width: 18rem;
   height: 18rem;
   top: 10%;
@@ -6284,7 +6284,7 @@ blockquote {
 }
 
 .call-to-action-image._01 {
-  background-image: url("https://cdn.prod.website-files.com/682b3c847ca8b75cf04ae23b/682b3c847ca8b75cf04ae334_template-img-09.webp");
+  background-image: url("../images/cdn/template-img-09.webp");
   width: 14rem;
   height: 14rem;
   top: 5%;
