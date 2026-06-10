@@ -1,4 +1,4 @@
-html {
+﻿html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   font-family: sans-serif;
@@ -2164,7 +2164,7 @@ textarea.w-input, textarea.w-select {
   --pink: #ff96c7;
   --purple-bg: #bfc5fe;
   --white: white;
-  --blue-bg: #e4f7ff;
+  --blue-bg: #d7f0fa;
 }
 
 .w-layout-grid {
@@ -3505,8 +3505,7 @@ blockquote {
   margin-bottom: 0;
 }
 
-.purple-background {
-  background-color: #d0f0fd;
+.purple-background { background-color: #d7f0fa;
 }
 
 .margin-0 {
@@ -7963,7 +7962,7 @@ blockquote {
 
 .preloader {
   z-index: 9999;
-  background-color: #d0f0fd;
+  background-color: #d7f0fa;
   flex-direction: column;
   justify-content: center;
   align-items: center;
