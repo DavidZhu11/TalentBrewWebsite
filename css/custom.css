@@ -203,6 +203,22 @@
 
 .partner-component-grid {
   gap: 1.5rem !important;
+  animation: marquee-scroll 30s linear infinite !important;
+  transform: none !important;
+}
+
+/* Override Webflow IX2 transform so CSS animation takes control */
+.partner-component-grid[style*="transform"] {
+  transform: none !important;
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* ============================================
