@@ -4,20 +4,15 @@
   if (!grid) return;
 
   // 1. Duplicate all logo items for seamless infinite scroll
-  var items = grid.querySelectorAll('.partner-item');
+  var items = Array.from(grid.querySelectorAll('.partner-item'));
   items.forEach(function (item) {
-    var clone = item.cloneNode(true);
-    grid.appendChild(clone);
+    grid.appendChild(item.cloneNode(true));
   });
 
-  // 2. Use MutationObserver to strip inline transform set by Webflow IX2
-  var observer = new MutationObserver(function () {
-    if (grid.style.transform) {
-      grid.style.transform = '';
-    }
-  });
-  observer.observe(grid, { attributes: true, attributeFilter: ['style'] });
-
-  // 3. Activate CSS marquee animation
-  grid.classList.add('marquee-active');
+  // 2. Replace the grid with a clean clone to disconnect ALL Webflow IX2 event listeners
+  //    cloneNode copies DOM but NOT event listeners, so IX2 can't touch it anymore
+  var cleanGrid = grid.cloneNode(true);
+  cleanGrid.removeAttribute('style'); // remove any inline transforms IX2 already set
+  cleanGrid.classList.add('marquee-active');
+  grid.parentNode.replaceChild(cleanGrid, grid);
 })();
