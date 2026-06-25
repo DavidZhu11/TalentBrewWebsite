@@ -2164,7 +2164,7 @@ textarea.w-input, textarea.w-select {
   --pink: #ff96c7;
   --purple-bg: #bfc5fe;
   --white: white;
-  --blue-bg: #d7f0fa;
+  --blue-bg: #c8e6ff;
 }
 
 .w-layout-grid {
@@ -3505,7 +3505,7 @@ blockquote {
   margin-bottom: 0;
 }
 
-.purple-background { background-color: #d7f0fa;
+.purple-background { background-color: #c8e6ff;
 }
 
 .margin-0 {
@@ -7962,7 +7962,7 @@ blockquote {
 
 .preloader {
   z-index: 9999;
-  background-color: #d7f0fa;
+  background-color: #c8e6ff;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -8023,7 +8023,7 @@ blockquote {
 }
 
 .body {
-  background-color: #d7f0fa;
+  background-color: #c8e6ff;
 }
 
 .testimonial-image-left {
