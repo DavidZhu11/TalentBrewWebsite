@@ -223,6 +223,15 @@
 
 .marquee-track .partner-item {
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.marquee-track .partner-logo {
+  width: 10rem;
+  max-width: none;
+  height: auto;
 }
 
 @keyframes marquee-scroll {
