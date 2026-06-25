@@ -201,10 +201,7 @@
   font-size: 1.1rem;
 }
 
-/* Hide the original Webflow grid (replaced by .marquee-track via JS) */
-.partner-component-grid {
-  display: none !important;
-}
+/* Grid is replaced by .marquee-track via custom.js */
 
 /* Override container centering so marquee can slide freely */
 .partner-container {
