@@ -206,13 +206,19 @@
   display: none !important;
 }
 
+/* Override container centering so marquee can slide freely */
+.partner-container {
+  justify-content: flex-start !important;
+  overflow: hidden !important;
+}
+
 /* Marquee track: flex row, no wrapping, continuous scroll left-to-right */
 .marquee-track {
   display: flex;
   align-items: center;
   gap: 4rem;
   width: max-content;
-  animation: marquee-scroll 27s linear infinite;
+  animation: marquee-scroll 18s linear infinite;
 }
 
 .marquee-track .partner-item {
@@ -224,7 +230,7 @@
     transform: translateX(-50%);
   }
   100% {
-    transform: translateX(0);
+    transform: translateX(0%);
   }
 }
 
