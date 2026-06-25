@@ -206,13 +206,13 @@
   display: none !important;
 }
 
-/* Marquee track: flex row, no wrapping, continuous scroll */
+/* Marquee track: flex row, no wrapping, continuous scroll left-to-right */
 .marquee-track {
   display: flex;
   align-items: center;
   gap: 4rem;
   width: max-content;
-  animation: marquee-scroll 40s linear infinite;
+  animation: marquee-scroll 27s linear infinite;
 }
 
 .marquee-track .partner-item {
@@ -221,10 +221,10 @@
 
 @keyframes marquee-scroll {
   0% {
-    transform: translateX(0);
+    transform: translateX(-50%);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(0);
   }
 }
 
