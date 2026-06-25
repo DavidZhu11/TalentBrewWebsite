@@ -2051,7 +2051,7 @@ textarea.w-input, textarea.w-select {
   src: url("../fonts/Bevellier-Light.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
@@ -2059,7 +2059,7 @@ textarea.w-input, textarea.w-select {
   src: url("../fonts/Bevellier-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
@@ -2067,7 +2067,7 @@ textarea.w-input, textarea.w-select {
   src: url("../fonts/Bevellier-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
@@ -2075,7 +2075,7 @@ textarea.w-input, textarea.w-select {
   src: url("../fonts/Bevellier-Semibold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
@@ -2083,7 +2083,7 @@ textarea.w-input, textarea.w-select {
   src: url("../fonts/Bevellier-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
@@ -2091,7 +2091,7 @@ textarea.w-input, textarea.w-select {
   src: url("../fonts/Bevellier-Black.woff2") format("woff2");
   font-weight: 900;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
@@ -2099,7 +2099,7 @@ textarea.w-input, textarea.w-select {
   src: url("../fonts/Poppins-Thin.woff2") format("woff2");
   font-weight: 100;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
@@ -2107,7 +2107,7 @@ textarea.w-input, textarea.w-select {
   src: url("../fonts/Poppins-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
@@ -2115,7 +2115,7 @@ textarea.w-input, textarea.w-select {
   src: url("../fonts/Poppins-Bold.woff2") format("woff2"), url("../fonts/Poppins-ExtraBold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
@@ -2123,7 +2123,7 @@ textarea.w-input, textarea.w-select {
   src: url("../fonts/Poppins-ExtraLight.woff2") format("woff2");
   font-weight: 200;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
@@ -2131,7 +2131,7 @@ textarea.w-input, textarea.w-select {
   src: url("../fonts/Poppins-SemiBold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
@@ -2139,7 +2139,7 @@ textarea.w-input, textarea.w-select {
   src: url("../fonts/Poppins-Black.woff2") format("woff2");
   font-weight: 900;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
@@ -2147,7 +2147,7 @@ textarea.w-input, textarea.w-select {
   src: url("../fonts/Poppins-Light.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
@@ -2155,7 +2155,7 @@ textarea.w-input, textarea.w-select {
   src: url("../fonts/Poppins-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 :root {
