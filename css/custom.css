@@ -201,44 +201,33 @@
   font-size: 1.1rem;
 }
 
-/* Hide Webflow grid — replaced by .marquee-track via custom.js */
-.partner-component-grid {
-  display: none !important;
-}
-
-/* Override container centering so marquee can slide freely */
+/* Override container so marquee can slide freely */
 .partner-container {
   justify-content: flex-start !important;
   overflow: hidden !important;
 }
 
-/* Marquee track: flex row, no wrapping, continuous scroll left-to-right */
+/* Marquee track: flex row, continuous scroll left-to-right */
 .marquee-track {
   display: flex;
   align-items: center;
   gap: 4rem;
   width: max-content;
-  animation: marquee-scroll 18s linear infinite;
-}
-
-.marquee-track .partner-item {
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  will-change: transform;
+  animation: marquee-scroll 25s linear infinite;
 }
 
 .marquee-track .partner-logo {
+  flex-shrink: 0;
   width: 10rem;
-  max-width: none;
   height: auto;
 }
 
 @keyframes marquee-scroll {
-  0% {
-    transform: translateX(-50%);
+  from {
+    transform: translateX(-33.333%);
   }
-  100% {
+  to {
     transform: translateX(0%);
   }
 }

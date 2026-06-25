@@ -1,41 +1,44 @@
 /* Custom JS - runs after Webflow scripts */
 (function () {
-  // Wait for DOM to be fully ready
   function initMarquee() {
     var grid = document.querySelector('.partner-component-grid');
     if (!grid) return;
 
-    // Collect ALL partner items
-    var items = Array.from(grid.querySelectorAll('.partner-item'));
-    console.log('Marquee: found ' + items.length + ' partner items');
-    if (items.length === 0) return;
+    // 1. Extract all logo image sources from the grid
+    var imgs = Array.from(grid.querySelectorAll('img.partner-logo'));
+    var sources = [];
+    imgs.forEach(function (img) {
+      // Use the base src (not srcset) for simplicity and reliability
+      if (img.src) sources.push(img.src);
+    });
 
-    // Build marquee track
+    console.log('Marquee: found ' + sources.length + ' logo images');
+    if (sources.length === 0) return;
+
+    // 2. Build a fresh marquee track with clean img elements
+    //    Repeat 3x to ensure there's always enough content visible
     var marquee = document.createElement('div');
     marquee.className = 'marquee-track';
 
-    // Add original items + duplicate for seamless loop
-    for (var copy = 0; copy < 2; copy++) {
-      items.forEach(function (item) {
-        var clone = item.cloneNode(true);
-        // Ensure images load (remove lazy loading)
-        var imgs = clone.querySelectorAll('img');
-        imgs.forEach(function (img) {
-          img.setAttribute('loading', 'eager');
-          // Remove srcset sizes that reference 100vw — force a reasonable size
-          img.removeAttribute('sizes');
-        });
-        marquee.appendChild(clone);
+    for (var copy = 0; copy < 3; copy++) {
+      sources.forEach(function (src) {
+        var img = document.createElement('img');
+        img.src = src;
+        img.className = 'partner-logo';
+        img.alt = '';
+        img.loading = 'eager';
+        img.decoding = 'async';
+        marquee.appendChild(img);
       });
     }
 
-    console.log('Marquee: total items in track = ' + marquee.children.length);
+    console.log('Marquee: ' + marquee.children.length + ' total images in track');
 
-    // Replace the grid with marquee (this removes grid from DOM — no CSS hide needed)
-    grid.parentNode.replaceChild(marquee, grid);
+    // 3. Hide original grid and insert marquee after it
+    grid.style.display = 'none';
+    grid.parentNode.insertBefore(marquee, grid.nextSibling);
   }
 
-  // Run on DOMContentLoaded or immediately if already loaded
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initMarquee);
   } else {
