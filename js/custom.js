@@ -3,16 +3,24 @@
   var grid = document.querySelector('.partner-component-grid');
   if (!grid) return;
 
-  // 1. Duplicate all logo items for seamless infinite scroll
+  // 1. Collect all partner items
   var items = Array.from(grid.querySelectorAll('.partner-item'));
+  if (items.length === 0) return;
+
+  // 2. Build a new marquee container that replaces the grid
+  var marquee = document.createElement('div');
+  marquee.className = 'marquee-track';
+
+  // Add original items
   items.forEach(function (item) {
-    grid.appendChild(item.cloneNode(true));
+    marquee.appendChild(item.cloneNode(true));
+  });
+  // Add duplicates for seamless loop
+  items.forEach(function (item) {
+    marquee.appendChild(item.cloneNode(true));
   });
 
-  // 2. Replace the grid with a clean clone to disconnect ALL Webflow IX2 event listeners
-  //    cloneNode copies DOM but NOT event listeners, so IX2 can't touch it anymore
-  var cleanGrid = grid.cloneNode(true);
-  cleanGrid.removeAttribute('style'); // remove any inline transforms IX2 already set
-  cleanGrid.classList.add('marquee-active');
-  grid.parentNode.replaceChild(cleanGrid, grid);
+  // 3. Replace the Webflow grid with our marquee track
+  //    This also disconnects from IX2 since the original node is removed
+  grid.parentNode.replaceChild(marquee, grid);
 })();

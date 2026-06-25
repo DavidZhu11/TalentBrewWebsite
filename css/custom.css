@@ -201,18 +201,27 @@
   font-size: 1.1rem;
 }
 
+/* Hide the original Webflow grid (replaced by .marquee-track via JS) */
 .partner-component-grid {
-  gap: 1.5rem !important;
+  display: none !important;
 }
 
-/* Applied by custom.js after disabling Webflow IX2 on this element */
-.partner-component-grid.marquee-active {
-  animation: marquee-scroll 30s linear infinite !important;
+/* Marquee track: flex row, no wrapping, continuous scroll */
+.marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  width: max-content;
+  animation: marquee-scroll 40s linear infinite;
+}
+
+.marquee-track .partner-item {
+  flex-shrink: 0;
 }
 
 @keyframes marquee-scroll {
   0% {
-    transform: translateX(0%);
+    transform: translateX(0);
   }
   100% {
     transform: translateX(-50%);
