@@ -225,7 +225,7 @@
 
 @keyframes marquee-scroll {
   from {
-    transform: translateX(-33.333%);
+    transform: translateX(-50%);
   }
   to {
     transform: translateX(0%);

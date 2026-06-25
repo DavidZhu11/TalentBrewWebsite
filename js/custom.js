@@ -1,26 +1,27 @@
 /* Custom JS - runs after Webflow scripts */
 (function () {
   function initMarquee() {
-    var grid = document.querySelector('.partner-component-grid');
-    if (!grid) return;
+    // There are MULTIPLE .partner-component-grid elements — grab ALL of them
+    var grids = document.querySelectorAll('.partner-component-grid');
+    if (grids.length === 0) return;
 
-    // 1. Extract all logo image sources from the grid
-    var imgs = Array.from(grid.querySelectorAll('img.partner-logo'));
+    // 1. Extract ALL logo image sources from ALL grids
     var sources = [];
-    imgs.forEach(function (img) {
-      // Use the base src (not srcset) for simplicity and reliability
-      if (img.src) sources.push(img.src);
+    grids.forEach(function (grid) {
+      var imgs = grid.querySelectorAll('img.partner-logo');
+      imgs.forEach(function (img) {
+        if (img.src) sources.push(img.src);
+      });
     });
 
-    console.log('Marquee: found ' + sources.length + ' logo images');
+    console.log('Marquee: found ' + sources.length + ' logos across ' + grids.length + ' grids');
     if (sources.length === 0) return;
 
-    // 2. Build a fresh marquee track with clean img elements
-    //    Repeat 3x to ensure there's always enough content visible
+    // 2. Build marquee track with 2 copies for seamless loop
     var marquee = document.createElement('div');
     marquee.className = 'marquee-track';
 
-    for (var copy = 0; copy < 3; copy++) {
+    for (var copy = 0; copy < 2; copy++) {
       sources.forEach(function (src) {
         var img = document.createElement('img');
         img.src = src;
@@ -32,11 +33,16 @@
       });
     }
 
-    console.log('Marquee: ' + marquee.children.length + ' total images in track');
+    // 3. Hide ALL original grids
+    grids.forEach(function (grid) {
+      grid.style.display = 'none';
+    });
 
-    // 3. Hide original grid and insert marquee after it
-    grid.style.display = 'none';
-    grid.parentNode.insertBefore(marquee, grid.nextSibling);
+    // 4. Insert marquee into the partner container
+    var container = document.querySelector('.partner-container');
+    if (container) {
+      container.appendChild(marquee);
+    }
   }
 
   if (document.readyState === 'loading') {
