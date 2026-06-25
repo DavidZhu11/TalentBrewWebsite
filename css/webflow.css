@@ -4812,7 +4812,8 @@ blockquote {
   background-image: url("../images/cdn/talentbrew_chocolate_bar_lady.png");
   background-position: 50%;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+  background-color: #A8E6CF;
   border-radius: 2rem;
   justify-content: center;
   align-items: center;
@@ -4848,7 +4849,8 @@ blockquote {
   transform-style: preserve-3d;
   background-image: url("../images/cdn/talentbrew_popcorn_bag_lady.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+  background-color: #C3B1E1;
   border-radius: 2rem;
   justify-content: center;
   align-items: center;
@@ -4866,7 +4868,8 @@ blockquote {
   background-image: url("../images/cdn/talentbrew_potato_chip_bag_guy.png");
   background-position: 50%;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+  background-color: #FF8B94;
   border-radius: 2rem;
   justify-content: center;
   align-items: center;
@@ -4906,7 +4909,8 @@ blockquote {
   background-image: url("../images/cdn/talentbrew_cereal_box_lady.png");
   background-position: 50%;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+  background-color: #FFD166;
   border-radius: 2rem;
   justify-content: center;
   align-items: center;
@@ -4980,7 +4984,8 @@ blockquote {
   background-image: url("../images/cdn/talentbrew_bag_of_nuts_lady.png");
   background-position: 100% 100%;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+  background-color: #FFDAB9;
   border-radius: 2rem;
   justify-content: center;
   align-items: center;
@@ -5025,7 +5030,8 @@ blockquote {
   background-image: url("../images/cdn/talentbrew_energy_drink_scientist_lady.png");
   background-position: 50%;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+  background-color: #87CEEB;
   border-radius: 2rem;
   justify-content: center;
   align-items: center;
