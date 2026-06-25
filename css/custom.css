@@ -211,9 +211,9 @@
 .marquee-track {
   display: flex;
   align-items: center;
-  gap: 4rem;
   width: max-content;
   will-change: transform;
+  backface-visibility: hidden;
   animation: marquee-scroll 25s linear infinite;
 }
 
@@ -221,6 +221,7 @@
   flex-shrink: 0;
   width: 10rem;
   height: auto;
+  margin-right: 4rem;
 }
 
 @keyframes marquee-scroll {
